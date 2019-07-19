@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+ // todo 定时检查文件变化，如果发生变化就重启app.js
+const path = require('path')
+const md5 = require('md5')
+const fs = require('fs')
+const child_process = require('child_process')
+
+console.log(`Watching ${appFileName}`)
+
+const appFileName = process.argv[2]
+// 运行hotnode命令时先执行一次运行
+let appProcess = child_process.exec(`node ${appFileName}`, (err, stdout) => {
+  console.log(stdout)
+})
+const appFilePath = path.join(__dirname, appFileName)
+let codeMd5 = ''
+
+fs.watch(appFilePath, (curr, prev) => {
+  // 通过比较文件前后md5的变化判断文件是否更新
+  var currentMd5 = md5(fs.readFileSync(appFilePath))
+  if (currentMd5 === codeMd5) {
+    return
+  }
+  console.log(`${appFileName}文件发生更新,即将重启`)
+  appProcess.kill()
+  appProcess = child_process.exec(`node ${appFileName}`, (err, stdout) => {
+    console.log(stdout)
+  })
+  codeMd5 = currentMd5
+})
