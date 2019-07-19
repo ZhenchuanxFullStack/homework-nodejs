@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+
+const spawn = require('child_process').spawn;
+const watch = require('watch')
+const entry = require.resolve(process.cwd(), process.argv[2]) 
+
+// 启动文件
+const start = (entry) => {
+  ls = spawn('node', [entry])
+  ls.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+  });
+
+  ls.stderr.on('data', (data) => {
+    console.log('程序意外退出')
+    console.log(`stderr: ${data}`);
+  });
+
+  ls.on('close', (code) => {
+    console.log(`child process exited with code ${code}`);
+  });
+  return ls
+}
+console.log(process.cwd())
+watch.createMonitor(process.cwd(), function (monitor) {
+  monitor.files[entry]
+  console.log(entry)
+  monitor.on("changed", function (f, curr, prev) {
+    // 只监听启动文件
+    if(f !== entry) return
+    console.log('文件已经变动，重新启动程序')
+    ab.kill()
+    ab = start(entry)
+  })
+})
+
+console.log('程序已启动')
+let ab = start(entry)
