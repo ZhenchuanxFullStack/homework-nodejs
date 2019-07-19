@@ -1,5 +1,5 @@
 const process = require("process");
-const child_process = require("child_process");
+const { spawn } = require("child_process");
 
 class DeviceService {
   // 获取CPU状态
@@ -14,10 +14,27 @@ class DeviceService {
 
   // 获取进程列表，并按照CPU使用率排序
   static async getProcessList() {
-    const command = `ps aux`;
-    const { stdout, stderr } = await child_process.exec(command);
+    return new Promise((resolve, reject) => {
+      // linux
+      // const command = `ps`;
+      // const options = ["-aux --sort -pcpu"];
 
-    return stdout;
+      // Mac
+      const command = `ps`;
+      const options = ["aux"];
+      const child = spawn(command, options);
+
+      let chunks = [];
+
+      child.stdout.on("data", data => {
+        chunks.push(data);
+      });
+
+      child.stdout.on("close", () => {
+        const resString = Buffer.concat(chunks).toString();
+        resolve(resString.split("\n"));
+      });
+    });
   }
 }
 module.exports = DeviceService;

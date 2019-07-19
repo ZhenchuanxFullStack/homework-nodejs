@@ -4,7 +4,7 @@ class DeviceController {
   static async device(ctx, next) {
     const cpu = DeviceService.getCpuStatus();
     const memo = DeviceService.getMemUsage();
-    const ps = DeviceService.getProcessList();
+    const ps = await DeviceService.getProcessList();
 
     ctx.body = {
       cpu,
