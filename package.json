@@ -1,0 +1,29 @@
+{
+	"name": "homework-nodejs",
+	"version": "1.0.0",
+	"description": "作业",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "node bin/hotnode.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/liuwei901207/homework-nodejs.git"
+	},
+	"author": "liuwei",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/liuwei901207/homework-nodejs/issues"
+	},
+	"homepage": "https://github.com/liuwei901207/homework-nodejs#readme",
+	"dependencies": {
+		"current-processes": "^0.2.1",
+		"koa-router": "^7.4.0",
+		"koa2": "^2.0.0-alpha.7",
+		"lodash": "^4.17.15"
+	},
+	"devDependencies": {
+		"supervisor": "^0.12.0"
+	}
+}
