@@ -1,5 +1,5 @@
 #!/usr/bin/env node
- // todo 定时检查文件变化，如果发生变化就重启app.js
+
 const path = require('path')
 const md5 = require('md5')
 const fs = require('fs')
