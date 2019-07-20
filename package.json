@@ -1,0 +1,25 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "koa and deamon",
+  "main": "app.js",
+  "scripts": {
+  	"start": "node hotload.js --file ./src/index.js --watchdir src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tovinping/homework-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tovinping/homework-nodejs/issues"
+  },
+  "homepage": "https://github.com/tovinping/homework-nodejs#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0"
+  }
+}
