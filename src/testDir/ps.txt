@@ -1,0 +1,91 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.5 128028  6592 ?        Ss   00:40   0:01 /usr/lib/systemd/systemd --switched-root --system --deserialize 22
+root         2  0.0  0.0      0     0 ?        S    00:40   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    00:40   0:00 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   00:40   0:00 [kworker/0:0H]
+root         6  0.0  0.0      0     0 ?        S    00:40   0:00 [kworker/u2:0]
+root         7  0.0  0.0      0     0 ?        S    00:40   0:00 [migration/0]
+root         8  0.0  0.0      0     0 ?        S    00:40   0:00 [rcu_bh]
+root         9  0.0  0.0      0     0 ?        R    00:40   0:01 [rcu_sched]
+root        10  0.0  0.0      0     0 ?        S<   00:40   0:00 [lru-add-drain]
+root        11  0.0  0.0      0     0 ?        S    00:40   0:00 [watchdog/0]
+root        13  0.0  0.0      0     0 ?        S    00:40   0:00 [kdevtmpfs]
+root        14  0.0  0.0      0     0 ?        S<   00:40   0:00 [netns]
+root        15  0.0  0.0      0     0 ?        S    00:40   0:00 [khungtaskd]
+root        16  0.0  0.0      0     0 ?        S<   00:40   0:00 [writeback]
+root        17  0.0  0.0      0     0 ?        S<   00:40   0:00 [kintegrityd]
+root        18  0.0  0.0      0     0 ?        S<   00:40   0:00 [bioset]
+root        19  0.0  0.0      0     0 ?        S<   00:40   0:00 [bioset]
+root        20  0.0  0.0      0     0 ?        S<   00:40   0:00 [bioset]
+root        21  0.0  0.0      0     0 ?        S<   00:40   0:00 [kblockd]
+root        22  0.0  0.0      0     0 ?        S<   00:40   0:00 [md]
+root        23  0.0  0.0      0     0 ?        S<   00:40   0:00 [edac-poller]
+root        24  0.0  0.0      0     0 ?        S<   00:40   0:00 [watchdogd]
+root        30  0.0  0.0      0     0 ?        S    00:40   0:00 [kswapd0]
+root        31  0.0  0.0      0     0 ?        SN   00:40   0:00 [ksmd]
+root        32  0.0  0.0      0     0 ?        SN   00:40   0:00 [khugepaged]
+root        33  0.0  0.0      0     0 ?        S<   00:40   0:00 [crypto]
+root        41  0.0  0.0      0     0 ?        S<   00:40   0:00 [kthrotld]
+root        43  0.0  0.0      0     0 ?        S<   00:40   0:00 [kmpath_rdacd]
+root        44  0.0  0.0      0     0 ?        S<   00:40   0:00 [kaluad]
+root        45  0.0  0.0      0     0 ?        S<   00:40   0:00 [kpsmoused]
+root        46  0.0  0.0      0     0 ?        S<   00:40   0:00 [ipv6_addrconf]
+root        59  0.0  0.0      0     0 ?        S<   00:40   0:00 [deferwq]
+root        90  0.0  0.0      0     0 ?        S    00:40   0:00 [kauditd]
+root       720  0.0  0.0      0     0 ?        S<   00:40   0:00 [hv_vmbus_con]
+root      1041  0.0  0.0      0     0 ?        S    00:40   0:00 [scsi_eh_0]
+root      1049  0.0  0.0      0     0 ?        S<   00:40   0:00 [scsi_tmf_0]
+root      1058  0.0  0.0      0     0 ?        S<   00:40   0:00 [storvsc_error_w]
+root      1064  0.0  0.0      0     0 ?        S    00:40   0:00 [kworker/u2:2]
+root      1200  0.0  0.0      0     0 ?        S<   00:40   0:00 [kdmflush]
+root      1201  0.0  0.0      0     0 ?        S<   00:40   0:00 [bioset]
+root      1214  0.0  0.0      0     0 ?        S<   00:40   0:00 [kdmflush]
+root      1215  0.0  0.0      0     0 ?        S<   00:40   0:00 [bioset]
+root      1234  0.0  0.0      0     0 ?        S<   00:40   0:00 [bioset]
+root      1239  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfsalloc]
+root      1244  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs_mru_cache]
+root      1247  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-buf/dm-0]
+root      1250  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-data/dm-0]
+root      1253  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-conv/dm-0]
+root      1254  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-cil/dm-0]
+root      1255  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-reclaim/dm-]
+root      1256  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-log/dm-0]
+root      1257  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-eofblocks/d]
+root      1258  0.0  0.0      0     0 ?        S    00:40   0:00 [xfsaild/dm-0]
+root      1259  0.0  0.0      0     0 ?        S<   00:40   0:00 [kworker/0:1H]
+root      1326  0.0  0.1  36816  2404 ?        Ss   00:40   0:00 /usr/lib/systemd/systemd-journald
+root      1347  0.0  0.4 127372  5488 ?        Ss   00:40   0:00 /usr/sbin/lvmetad -f
+root      1355  0.0  0.3  47444  4896 ?        Ss   00:40   0:00 /usr/lib/systemd/systemd-udevd
+root      1944  0.0  0.0      0     0 ?        S    00:40   0:00 [hv_balloon]
+root      2205  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-buf/sda2]
+root      2216  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-data/sda2]
+root      2220  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-conv/sda2]
+root      2227  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-cil/sda2]
+root      2233  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-reclaim/sda]
+root      2237  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-log/sda2]
+root      2245  0.0  0.0      0     0 ?        S<   00:40   0:00 [xfs-eofblocks/s]
+root      2274  0.0  0.0      0     0 ?        S    00:40   0:00 [xfsaild/sda2]
+root      2337  0.0  0.0  62044  1088 ?        S<sl 00:40   0:00 /sbin/auditd
+dbus      2359  0.0  0.2  66460  2600 ?        Ssl  00:40   0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+polkitd   2362  0.0  0.9 613000 11940 ?        Ssl  00:40   0:00 /usr/lib/polkit-1/polkitd --no-debug
+root      2365  0.0  0.1  26376  1784 ?        Ss   00:40   0:00 /usr/lib/systemd/systemd-logind
+root      2370  0.0  0.1 126284  1704 ?        Ss   00:40   0:00 /usr/sbin/crond -n
+chrony    2388  0.0  0.1 117784  1836 ?        S    00:40   0:00 /usr/sbin/chronyd
+root      2412  0.0  2.2 358192 29132 ?        Ssl  00:40   0:00 /usr/bin/python -Es /usr/sbin/firewalld --nofork --nopid
+root      2413  0.0  0.8 701172 10796 ?        Ssl  00:40   0:02 /usr/sbin/NetworkManager --no-daemon
+root      2894  0.0  1.3 573828 17120 ?        Ssl  00:40   0:05 /usr/bin/python2 -Es /usr/sbin/tuned -l -P
+root      2897  0.1  0.3 112756  4352 ?        Ss   00:40   0:00 /usr/sbin/sshd -D
+root      2900  0.5  0.2 214148  3304 ?        Ssl  00:40   0:02 /usr/sbin/rsyslogd -n
+root      2948  0.3  0.1 125008  2280 ?        Ss   00:40   0:00 nginx: master process /usr/sbin/nginx
+nginx     2949  0.1  0.2 125396  3588 ?        S    00:40   0:00 nginx: worker process
+mysql     3132  0.2 14.2 1120700 182508 ?      Sl   00:40   0:17 /usr/sbin/mysqld --daemonize --pid-file=/var/run/mysqld/mysqld.pid
+root      4020  0.6  0.1  96560  2472 ?        Ss   14:05   0:00 login -- root
+root      4025  0.0  0.3 117748  4284 tty1     Ss+  14:05   0:00 -bash
+root      4231  0.0  0.4 158764  5572 ?        Ss   14:14   0:00 sshd: root@pts/0
+root      4233  0.0  0.0      0     0 ?        S    14:14   0:00 [kworker/0:0]
+root      4236  0.0  0.3 117752  4400 pts/0    Ss+  14:14   0:00 -bash
+root      4457  0.0  0.4 158764  5576 ?        Ss   14:25   0:00 sshd: root@pts/1
+root      4461  0.0  0.3 117752  4400 pts/1    Ss   14:25   0:00 -bash
+root      4669  0.0  0.0      0     0 ?        S    14:30   0:00 [kworker/0:1]
+root      4674  0.0  0.0      0     0 ?        S    14:35   0:00 [kworker/0:2]
+root      4675  0.0  0.1 155360  1880 pts/1    R+   14:35   0:00 ps -aux
