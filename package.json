@@ -1,0 +1,23 @@
+{
+  "name": "homework-nodejs",
+  "version": "1.0.0",
+  "description": "作业 写⼀一个 web 服务（app.js），提供接⼝口：",
+  "main": "index.js",
+  "scripts": {
+    "hotnode": "node bin/hotnode.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmazeRan/homework-nodejs.git"
+  },
+  "author": "ranchen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmazeRan/homework-nodejs/issues"
+  },
+  "homepage": "https://github.com/AmazeRan/homework-nodejs#readme",
+  "devDependencies": {
+    "watch": "^1.0.2"
+  }
+}
