@@ -10,4 +10,7 @@ router.get("/device", DeviceController.device);
 
 app.use(router.routes()).use(router.allowedMethods());
 
-app.listen(7001);
+console.log(0);
+app.listen(7001, () => {
+  console.log("server is running at 7001");
+});
