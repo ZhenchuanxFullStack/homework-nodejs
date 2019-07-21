@@ -1,0 +1,26 @@
+{
+  "name": "homework-nodejs",
+  "version": "1.0.0",
+  "description": "作业",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/hotnode.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hezon/homework-nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hezon/homework-nodejs/issues"
+  },
+  "homepage": "https://github.com/Hezon/homework-nodejs#readme",
+  "dependencies": {
+    "koa": "^2.7.0"
+  },
+  "devDependencies": {
+    "chokidar": "^3.0.2"
+  }
+}
