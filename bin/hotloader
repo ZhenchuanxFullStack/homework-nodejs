@@ -1,0 +1,47 @@
+var fs = require('fs');
+var path = require("path");
+var spawn = require('child_process').spawn;
+
+class HotLoader {
+    constructor(args, extName, launcher) {
+        this.args = args;
+        this.extName = extName;
+        this.launcher = launcher;
+        this.passedArguments = this.args.slice(2);
+    }
+    run(){
+        fs.watch(
+            path.join(process.cwd(), this.passedArguments[0]),
+            (event, filename) => {
+              this.restartProcess();
+            }
+        );
+        return this.startProgress();
+    }
+    startProgress() {
+        console.log('文件启动===')
+        this.process = spawn(this.launcher, this.passedArguments, {
+            env: process.env
+        });
+        this.process.stdout.on("data", data => {
+            console.log(data.toString());
+        });
+        this.process.stderr.on("data", function(data) {
+            const errmessage = '----error----'+ data.toString();
+            console.log(errmessage)
+        });
+    }
+    restartProcess() {
+        if (this.process !== null) {
+            try {
+                this.process.kill("SIGKILL");
+            } catch (error) {
+                console.log("Exception: " + error.message, "bad");
+            }
+        }
+        console.log('文件重启====')
+        this.startProgress();
+    }
+}
+
+module.exports = HotLoader;

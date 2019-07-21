@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+var HotLoader, VERSION, args, loader, path;
+path = require('path');
+HotLoader = require('./hotloader');
+VERSION = "0.0.1";
+args = process.argv;
+if (args.length > 2) {
+  if (args[2] === "-v" || args[2] === "--version") {
+    console.log("v" + VERSION);
+  } else {
+    loader = new HotLoader(args, 'js', 'node');
+    loader.run();
+  }
+} else {
+  console.log("\nHotnode - Hot node is watching script for Nodejs\n");
+  console.log("Usage:");
+  console.log("hotcoffee [options] script.coffee [arguments] ");
+  console.log("Hotnode arguments:")
+  console.log(" -v=[--version]      View version number of Hotnode")
+  console.log(" *.js                Watch script Updates")
+}
