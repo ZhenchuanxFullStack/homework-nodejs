@@ -4,6 +4,7 @@
   "description": "作业",
   "main": "index.js",
   "scripts": {
+    "start": "node ./bin/hotnode.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/Hezon/homework-nodejs#readme",
   "dependencies": {
     "koa": "^2.7.0"
+  },
+  "devDependencies": {
+    "chokidar": "^3.0.2"
   }
 }
