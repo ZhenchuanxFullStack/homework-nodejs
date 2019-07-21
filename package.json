@@ -1,0 +1,22 @@
+{
+  "name": "homework-nodejs",
+  "version": "1.0.0",
+  "description": "nodejs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node watch.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yyidota/homework-nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yyidota/homework-nodejs/issues"
+  },
+  "homepage": "https://github.com/yyidota/homework-nodejs#readme",
+  "dependencies": {
+    "md5": "^2.2.1"
+  }
+}
