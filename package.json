@@ -1,0 +1,23 @@
+{
+  "name": "homework-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "hotnode": "node bin/hotnode",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GGXXMM/homework-nodejs.git"
+  },
+  "author": "guoxinming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GGXXMM/homework-nodejs/issues"
+  },
+  "homepage": "https://github.com/GGXXMM/homework-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
