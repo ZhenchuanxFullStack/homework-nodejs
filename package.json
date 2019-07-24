@@ -1,0 +1,18 @@
+{
+  "name": "homework-nodejs",
+  "version": "1.0.0",
+  "description": "service for the application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@47.104.243.61:/home/git/gitrep/homework-nodejs.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
