@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+const fs = require("fs");
+const path = require("path");
+const commander = require("commander");
+const hotnode = require("./hotloader.js");
+
+const program = new commander.Command();
+
+let configData = {
+	application: "./index1.js",
+	config: "./.hotnoderc",
+	watch: "./"
+};
+
+program
+	.version("0.0.1")
+	.option("-a, --application <file>", "应用文件路径", configData.application)
+	.option("-w, --watch <fileOrDir>", "监听变化路径", configData.watch);
+
+program.parse(process.argv);
+
+hotnode.run(program);
