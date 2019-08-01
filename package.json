@@ -1,20 +1,17 @@
 {
-  "name": "homework-nodejs",
-  "version": "1.0.0",
-  "description": "写一个 web 服务,提供以下服务：   GET 接口 `/device?pw=cpu&sort=desc`，返回：",
-  "main": "index.js",
-  "bin": {
-    "homework-nodejs": "hotnode.js"
-  },
-  "scripts": {
-    "start": "node ./index.js",
-    "debug": "node --inspect-brk ./index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com_qyingkou:qyingkou/homework-nodejs.git"
-  },
-  "keywords": [],
-  "author": "qingkooo <qingkooo@163.com>",
-  "license": "MIT"
+	"name": "homework-nodejs",
+	"version": "1.0.0",
+	"description": "练习写一个接口和一个守护进程",
+	"scripts": {
+		"start": "node ./index.js",
+		"debug": "node --inspect-brk ./index.js",
+		"hot": "./bin/hotnode -a ./index.js -w ./"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:qyingkou/homework-nodejs.git"
+	},
+	"dependencies": {
+		"commander": "^2.20.0"
+	}
 }
