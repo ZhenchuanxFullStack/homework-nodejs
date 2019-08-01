@@ -12,6 +12,7 @@
 		"url": "git@github.com:qyingkou/homework-nodejs.git"
 	},
 	"dependencies": {
+		"chokidar": "^3.0.2",
 		"commander": "^2.20.0"
 	}
 }
