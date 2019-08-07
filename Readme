@@ -6,7 +6,134 @@
 
 返回:
 * 服务器器的 CPU、内存状态
-* 服务器器的全量量进程列列表并按照 CPU 消耗量量排序
+* 服务器器的全量量进程列表并按照 CPU 消耗量量排序
 
 ## 同⽬目录下写一个 bin/hotnode 最终通过 hotnode app.js 
 启动服务 并在 app.js ⽂文件变更更后⾃自动重启 app.js 进程。
+
+
+## 作业思路
+
+1. 使用 ```koa```、```koa-router``` 作为 Web 服务框架
+2. 使用插件 ```current-processes``` 服务器器的全量量进程列列表
+3. 使用插件 ```lodash``` 进行排序
+
+
+## 遇到问题
+
+### koa-router 使用写法不熟悉，琢磨了很久。结果后来参照文档，是我想复杂了。
+
+查看 koa-router Demo 整理好思路
+
+```
+const Koa = require('koa');
+const Router = require('koa-router');
+
+const app = new Koa();
+const router = new Router();
+
+const PORT = 4000;
+
+const systemInfo = {
+    '系统类型': os.platform(),
+    'CPU型号': os.cpus()[0].model,
+    '总内存': (os.totalmem() / (1024 * 1024 * 1024)).toFixed(2) + ' GB',
+    '空闲内存': (os.freemem() / (1024 * 1024 * 1024)).toFixed(2) + ' GB'
+};
+
+router.get('/', async (ctx, next) => {
+    await next();
+    ctx.body = "Hello Koa";
+})
+router.get('/device', async (ctx, next) => {
+    await next();
+    ctx.body = "device Koa";
+});
+
+// 加载路由中间件
+app.use(router.routes()).use(router.allowedMethods());
+
+app.listen(PORT, () => {
+    console.log(`listening ${PORT}`);
+});
+
+```
+
+### node I/O 模式不适应，导致 ```current-processes``` 获取失败。
+
+虽然之前知道 nodejs 有 I/O 的特性，但是不踩过永远都不知道是什么样的坑。
+
+```
+// 之前错误的做法
+router.get('/device', (ctx) => {
+    processes =  ps.get(function(err, processes) {
+        const sorted = _.sortBy(processes, 'cpu');
+        const result = sorted.reverse();
+        return result;
+    });
+    ctx.response.status = 200
+    ctx.response.body = {
+        code: 0,
+        success: true,
+        data: {
+            systemInfo,
+            processes
+        },
+        messege: '请求成功！'
+    };
+});
+
+```
+
+使用  ```async```、```await``` 和 ```Promise```，确保 ```current-processes``` 获取完成再继续返回
+
+```
+
+router.get('/device', async (ctx, next) => {
+    await next();
+    const processes = await new Promise((resolve, reject) => {
+        ps.get(function(err, processes) {
+
+            const sorted = _.sortBy(processes, 'cpu');
+            const result = sorted.reverse();
+            resolve(result);
+        });
+    })
+    ctx.response.status = 200
+    ctx.response.body = {
+        code: 0,
+        success: true,
+        data: {
+            systemInfo,
+            processes
+        },
+        messege: '请求成功！'
+    };
+});
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

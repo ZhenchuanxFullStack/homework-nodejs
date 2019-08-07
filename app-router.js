@@ -1,8 +1,5 @@
 const Koa = require('koa');
 const Router = require('koa-router');
-const _ = require('lodash');
-const ps = require('current-processes');
-const os = require('os');
 
 const app = new Koa();
 const router = new Router();
@@ -22,24 +19,7 @@ router.get('/', async (ctx, next) => {
 })
 router.get('/device', async (ctx, next) => {
     await next();
-    const processes = await new Promise((resolve, reject) => {
-        ps.get(function(err, processes) {
-
-            const sorted = _.sortBy(processes, 'cpu');
-            const result = sorted.reverse();
-            resolve(result);
-        });
-    })
-    ctx.response.status = 200
-    ctx.response.body = {
-        code: 0,
-        success: true,
-        data: {
-            systemInfo,
-            processes
-        },
-        messege: '请求成功！'
-    };
+    ctx.body = "device Koa";
 });
 
 // 加载路由中间件
