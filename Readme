@@ -1,1 +1,12 @@
 作业
+
+## 写⼀个 web 服务(app.js)
+
+提供接⼝口: GET /device
+
+返回:
+* 服务器器的 CPU、内存状态
+* 服务器器的全量量进程列列表并按照 CPU 消耗量量排序
+
+## 同⽬目录下写一个 bin/hotnode 最终通过 hotnode app.js 
+启动服务 并在 app.js ⽂文件变更更后⾃自动重启 app.js 进程。
