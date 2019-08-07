@@ -9,7 +9,7 @@ let router = new Router();
 
 const PORT = 4000;
 
-let systemInfo = {
+const systemInfo = {
     '系统类型': os.platform(),
     'CPU型号': os.cpus()[0].model,
     '总内存': (os.totalmem() / (1024 * 1024 * 1024)).toFixed(2) + ' GB',
