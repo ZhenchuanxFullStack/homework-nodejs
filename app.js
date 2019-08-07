@@ -46,5 +46,5 @@ router.get('/device', async (ctx, next) => {
 app.use(router.routes()).use(router.allowedMethods());
 
 app.listen(PORT, () => {
-    console.log(`listening ${PORT}`);
+    console.log(`listening http://localhost:${PORT}/`);
 });
