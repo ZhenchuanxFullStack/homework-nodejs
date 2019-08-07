@@ -1,0 +1,32 @@
+{
+  "name": "homework-nodejs",
+  "version": "1.0.0",
+  "description": "homework-nodejs",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoyexiang/homework-nodejs.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "yezi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiaoyexiang/homework-nodejs/issues"
+  },
+  "homepage": "https://github.com/xiaoyexiang/homework-nodejs#readme",
+  "dependencies": {
+    "current-processes": "^0.2.1",
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
